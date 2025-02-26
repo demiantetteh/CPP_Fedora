@@ -34,12 +34,15 @@ int main()
             need_to_ton_weight = CONV_OUNCES - ounce_pack;
             double temp_need_to_weight = need_to_ton_weight;
 
+            cnt = 0;
+
             if (need_to_ton_weight < 0)
             {
                 while (need_to_ton_weight <= 0)
                 {
                     cnt++;
                     temp_need_to_weight += CONV_OUNCES;
+                    need_to_ton_weight = temp_need_to_weight;
                 }
             }
 
